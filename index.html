@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Rank - Atividade Final JS</title>
+    <link id="theme-stylesheet" rel="stylesheet" href="styles_dark.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+</head>
+
+<body>
+    <header>
+        <h1>Calculadora de Rank</h1>
+        <div id="toggle-btn" class="fas fa-sun"></div>
+    </header>
+    <main>
+        <div class="calculator">
+            <div class="input-group">
+                <label for="victories">Vitórias:</label>
+                <input type="number" id="victories" name="victories" min="0" placeholder="Insira o número de vitórias">
+            </div>
+            <div class="input-group">
+                <label for="defeats">Derrotas:</label>
+                <input type="number" id="defeats" name="defeats" min="0" placeholder="Insira o número de derrotas">
+            </div>
+            <button onclick="updateRank()">Verificar</button>
+            <div id="result"></div>
+            <div class="rank-container">
+                <img id="rankImage" src="" alt="Rank Image">
+            </div>
+        </div>
+        <section class="info">
+            <h2>Como funciona o cálculo do rank?</h2>
+            <p>O cálculo do rank é baseado nas vitórias e derrotas do jogador. A fórmula é simples:</p>
+            <ul>
+                <li><strong>Winrate:</strong> É a razão entre vitórias e derrotas.</li>
+                <li><strong>Pontos de Rank:</strong> Vitórias multiplicadas pelo winrate. Caso o winrate seja menor que
+                    0.5, os pontos são multiplicados por 1.15.</li>
+            </ul>
+            <p>Os ranks são definidos da seguinte forma:</p>
+            <ul>
+                <li>Menos de 25 pontos: <strong>Sem rank</strong></li>
+                <li>25 a 99 pontos: <strong>Prata</strong></li>
+                <li>100 a 499 pontos: <strong>Ouro</strong></li>
+                <li>500 a 1499 pontos: <strong>Platina</strong></li>
+                <li>1500 a 2999 pontos: <strong>Lenda</strong></li>
+                <li>3000 ou mais pontos: <strong>Surreal</strong></li>
+            </ul>
+        </section>
+        <section class="tips">
+            <h2>Dicas para Melhorar sua Winrate</h2>
+            <div class="tip">
+                <h3>1. Pratique Regularmente</h3>
+                <p>A prática constante ajuda a melhorar suas habilidades e estratégias no jogo.</p>
+            </div>
+            <div class="tip">
+                <h3>2. Analise suas Partidas</h3>
+                <p>Revise suas partidas para entender seus erros e acertos. Aprender com os próprios erros é crucial.
+                </p>
+            </div>
+            <div class="tip">
+                <h3>3. Estude os Profissionais</h3>
+                <p>Assista a jogos de jogadores profissionais para aprender novas estratégias e táticas.</p>
+            </div>
+            <div class="tip">
+                <h3>4. Jogue em Equipe</h3>
+                <p>Comunicação e trabalho em equipe são essenciais para vencer partidas em jogos de equipe.</p>
+            </div>
+            <div class="tip">
+                <h3>5. Mantenha-se Calmo</h3>
+                <p>Fique calmo e focado durante as partidas. Estresse e frustração podem afetar negativamente seu
+                    desempenho.</p>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="programmers-info">
+            <p>Desenvolvido por:</p>
+            <div class="programmer">
+                <h3>Juan Andrei Ñanculeo Goler</h3>
+                <p>RA: 20241041</p>
+                <a href="https://www.instagram.com/juangolerr/" target="_blank">Instagram</a>
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>
